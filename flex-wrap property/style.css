@@ -1,0 +1,73 @@
+/* Reset CSS cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.demo-section {
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.demo-section h3 {
+    margin-bottom: 12px;
+    color: #007bff;
+}
+
+/* Cấu hình Flex Container chung theo yêu cầu bài tập */
+.container {
+    display: flex;
+    width: 600px;
+    height: 220px;
+    gap: 10px;
+    border: 2px solid black;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+/* Cấu hình Flex Item */
+.item {
+    width: 180px;
+    height: 80px;
+    line-height: 40px;
+    padding: 20px;
+    background-color: lightblue;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #0056b3;
+    border-radius: 4px;
+}
+
+/* Các trường hợp áp dụng flex-wrap */
+.container.wrap {
+    flex-wrap: wrap;
+}
+
+.container.nowrap {
+    flex-wrap: nowrap;
+}
+
+.container.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.container.initial {
+    flex-wrap: initial; /* Đưa về mặc định là nowrap */
+}
