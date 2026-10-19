@@ -1,0 +1,81 @@
+/* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Khung chứa toàn bộ trang web */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Đầu trang (Header) và Chân trang (Footer) */
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Thanh điều hướng (Navigation) */
+.nav {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #ff9800;
+}
+
+/* Khu vực nội dung chính + Sidebar */
+.main-container {
+    display: flex;
+    flex: 1; /* Chiếm toàn bộ chiều cao còn lại của container */
+}
+
+.content {
+    flex: 3; /* Tỉ lệ 3 phần */
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.sidebar {
+    flex: 1; /* Tỉ lệ 1 phần */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+}
+
+/* Responsive cho thiết bị di động (Màn hình dưới 768px) */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Chuyển Sidebar xuống dưới Content */
+    }
+
+    .sidebar {
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }
+
+    .nav a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+}
